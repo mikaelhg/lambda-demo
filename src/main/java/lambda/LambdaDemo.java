@@ -1,9 +1,6 @@
 package lambda;
 
 import java.util.*;
-import java.util.function.BiFunction;
-import java.util.function.Block;
-import java.util.function.Function;
 
 public class LambdaDemo {
 
@@ -21,8 +18,6 @@ public class LambdaDemo {
             return name;
         }
     }
-
-
 
     public static void main(final String ... args) {
         final List<TheWireCharacter> characters = Arrays.asList(
