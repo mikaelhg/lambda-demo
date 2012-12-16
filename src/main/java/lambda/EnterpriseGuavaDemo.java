@@ -12,7 +12,7 @@ import java.util.*;
  */
 public class EnterpriseGuavaDemo {
 
-    public static final List<TheWireCharacter> CHARACTERS = Arrays.asList(
+    public static final List<TheWireCharacter> CHARACTERS = ImmutableList.of(
             new TheWireCharacter("Jimmy McNulty", 1, 2, 3, 4, 5),
             new TheWireCharacter("Lester Freamon", 2, 3, 4, 5),
             new TheWireCharacter("Stringer Bell", 1, 2, 3),

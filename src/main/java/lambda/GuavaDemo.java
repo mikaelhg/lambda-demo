@@ -38,7 +38,7 @@ public class GuavaDemo {
     };
 
     public static void main(final String ... args) {
-        final List<TheWireCharacter> characters = Arrays.asList(
+        final List<TheWireCharacter> characters = ImmutableList.of(
                 new TheWireCharacter("Jimmy McNulty", 1, 2, 3, 4, 5),
                 new TheWireCharacter("Lester Freamon", 2, 3, 4, 5),
                 new TheWireCharacter("Stringer Bell", 1, 2, 3),
