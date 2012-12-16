@@ -72,9 +72,12 @@ public class EnterpriseGuavaDemo {
     }
 
     public static void main(final String ... args) {
-        final ImmutableList<TheWireCharacter> docks = FluentIterable.from(CHARACTERS)
-                .filter(TheWireCharacter.Filters.inSeasons(2))
-                .toSortedImmutableList(TheWireCharacter.Comparators.BY_SEASONS);
+        final ImmutableList<TheWireCharacter> docks =
+                FluentIterable
+                        .from(CHARACTERS)
+                            .filter(TheWireCharacter.Filters.inSeasons(2))
+                            .toSortedImmutableList(TheWireCharacter.Comparators.BY_SEASONS);
+
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
     }
 
