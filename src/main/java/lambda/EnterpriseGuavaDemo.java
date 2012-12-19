@@ -3,6 +3,7 @@ package lambda;
 import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 
 import java.util.*;
 
@@ -29,11 +30,11 @@ public class EnterpriseGuavaDemo {
      */
     public static class TheWireCharacter {
         public final String name;
-        public final Set<Integer> seasons;
+        public final ImmutableSet<Integer> seasons;
 
         public TheWireCharacter(final String name, final Integer ... seasons) {
             this.name = name;
-            this.seasons = Collections.unmodifiableSet(new TreeSet<>(Arrays.asList(seasons)));
+            this.seasons = ImmutableSet.copyOf(seasons);
         }
 
         public String toString() {
