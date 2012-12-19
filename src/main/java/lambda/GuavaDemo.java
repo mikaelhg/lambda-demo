@@ -17,7 +17,7 @@ public class GuavaDemo {
         public final ImmutableSet<Integer> seasons;
         public TheWireCharacter(final String name, final Integer ... seasons) {
             this.name = name;
-            this.seasons = ImmutableSet.copyOf(Arrays.asList(seasons));
+            this.seasons = ImmutableSet.copyOf(seasons);
         }
         public String toString() {
             return name;
