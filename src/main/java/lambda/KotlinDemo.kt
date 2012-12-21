@@ -2,7 +2,7 @@ package lambda
 
 data class TheWireCharacter(val name : String, vararg val seasons : Int)
 
-val CHARACTERS : List<TheWireCharacter> = arrayListOf(
+private val CHARACTERS : List<TheWireCharacter> = arrayListOf(
         TheWireCharacter("Jimmy McNulty", 1, 2, 3, 4, 5),
         TheWireCharacter("Lester Freamon", 2, 3, 4, 5),
         TheWireCharacter("Stringer Bell", 1, 2, 3),
@@ -14,13 +14,8 @@ val CHARACTERS : List<TheWireCharacter> = arrayListOf(
         TheWireCharacter("Avon Barksdale", 1, 2, 3)
 )
 
-fun IntArray.contains(item : Int) : Boolean {
-    for (element in this) { if (element == item) return true }
-    return false
-}
-
 fun main(args : Array<String>) {
-    val docks = CHARACTERS.filter { it.seasons.contains(2) }
+    val docks = CHARACTERS.filter { it.seasons.any { it == 2 } }
                           .sortBy { it.seasons.size }
                           .map { it.name }
 
