@@ -19,20 +19,20 @@ public class LambdaDemo {
         }
     }
 
-    public static void main(final String ... args) {
-        final List<TheWireCharacter> characters = Arrays.asList(
-                new TheWireCharacter("Jimmy McNulty", 1, 2, 3, 4, 5),
-                new TheWireCharacter("Lester Freamon", 2, 3, 4, 5),
-                new TheWireCharacter("Stringer Bell", 1, 2, 3),
-                new TheWireCharacter("Prez", 3, 4),
-                new TheWireCharacter("Omar Little", 3, 4, 5),
-                new TheWireCharacter("Chris Partlow", 5),
-                new TheWireCharacter("Frank Sobotka", 2),
-                new TheWireCharacter("D'Angelo Barksdale", 1, 2),
-                new TheWireCharacter("Avon Barksdale", 1, 2, 3)
-        );
+    private static final List<TheWireCharacter> CHARACTERS = Collections.unmodifiableList(Arrays.asList(
+            new TheWireCharacter("Jimmy McNulty", 1, 2, 3, 4, 5),
+            new TheWireCharacter("Lester Freamon", 2, 3, 4, 5),
+            new TheWireCharacter("Stringer Bell", 1, 2, 3),
+            new TheWireCharacter("Prez", 3, 4),
+            new TheWireCharacter("Omar Little", 3, 4, 5),
+            new TheWireCharacter("Chris Partlow", 5),
+            new TheWireCharacter("Frank Sobotka", 2),
+            new TheWireCharacter("D'Angelo Barksdale", 1, 2),
+            new TheWireCharacter("Avon Barksdale", 1, 2, 3)
+    ));
 
-        final List<TheWireCharacter> docks = characters.stream()
+    public static void main(final String ... args) {
+        final List<TheWireCharacter> docks = CHARACTERS.stream()
                         .filter(c -> c.seasons.contains(2))
                         .sorted((a, b) -> a.seasons.size() - b.seasons.size())
                         .into(new ArrayList<TheWireCharacter>());
