@@ -15,3 +15,17 @@ To play with the code, install:
 * IntelliJ IDEA 12 Community
 * Configure IDEA to use the Lambda preview JDK to compile and run the project code
   (File -> Project Structure -> Project SDK and Language Level)
+
+To run the demos manually:
+
+    # Java 8
+    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.LambdaDemo
+
+    # Google Guava
+    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.GuavaDemo
+
+    # Kotlin
+    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.namespace
+
+    # Groovy
+    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.GroovyDemo
