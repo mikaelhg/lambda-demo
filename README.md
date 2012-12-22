@@ -18,6 +18,8 @@ To play with the code, install:
 
 To run the demos manually:
 
+    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn clean install
+
     # Java 8
     JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.LambdaDemo
 
@@ -29,3 +31,9 @@ To run the demos manually:
 
     # Groovy
     JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.GroovyDemo
+
+    # Enterprise Guava
+    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.EnterpriseGuavaDemo
+
+    # LambdaJ
+    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.LambdaJDemo
