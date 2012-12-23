@@ -14,9 +14,6 @@ public class LambdaDemo {
             this.name = name;
             this.seasons = Collections.unmodifiableSet(new TreeSet<>(Arrays.asList(seasons)));
         }
-        public String toString() {
-            return name;
-        }
     }
 
     private static final List<TheWireCharacter> CHARACTERS = Collections.unmodifiableList(Arrays.asList(
@@ -32,10 +29,11 @@ public class LambdaDemo {
     ));
 
     public static void main(final String ... args) {
-        final List<TheWireCharacter> docks = CHARACTERS.stream()
+        final List<String> docks = CHARACTERS.stream()
                         .filter(c -> c.seasons.contains(2))
                         .sorted((a, b) -> a.seasons.size() - b.seasons.size())
-                        .into(new ArrayList<TheWireCharacter>());
+                        .map(c -> c.name)
+                        .into(new ArrayList<String>());
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
     }
