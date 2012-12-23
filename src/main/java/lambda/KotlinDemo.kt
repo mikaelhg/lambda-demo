@@ -1,4 +1,4 @@
-package lambda
+package lambda.kotlin
 
 data class TheWireCharacter(val name : String, vararg val seasons : Int)
 

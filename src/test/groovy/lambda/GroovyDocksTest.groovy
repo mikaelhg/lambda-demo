@@ -4,6 +4,7 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import static org.mockito.Mockito.*;
+import lambda.groovy.GroovyDemo
 
 /**
  * You shouldn't test System.out like this. This is very bad. The only reason
