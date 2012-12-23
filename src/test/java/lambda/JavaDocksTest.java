@@ -9,6 +9,11 @@ import java.io.PrintStream;
 import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
 
+/**
+ * You shouldn't test System.out like this. This is very bad. The only reason
+ * I'm doing it like this is because this isn't production code, but concept
+ * demonstration. DON'T DO LIKE I DO, DO WHAT I SAY!
+ */
 public class JavaDocksTest {
 
     private static final String EXPECTED =
