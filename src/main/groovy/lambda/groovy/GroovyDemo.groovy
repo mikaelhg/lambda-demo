@@ -8,7 +8,7 @@ class TheWireCharacter {
     Set<Integer> seasons;
 }
 
-def CHARACTERS = Collections.unmodifiableList(Arrays.asList(
+def CHARACTERS = [
         new TheWireCharacter(name: "Jimmy McNulty", seasons: [1, 2, 3, 4, 5] as Set),
         new TheWireCharacter(name: "Lester Freamon", seasons: [2, 3, 4, 5] as Set),
         new TheWireCharacter(name: "Stringer Bell", seasons: [1, 2, 3] as Set),
@@ -18,7 +18,7 @@ def CHARACTERS = Collections.unmodifiableList(Arrays.asList(
         new TheWireCharacter(name: "Frank Sobotka", seasons: [2] as Set),
         new TheWireCharacter(name: "D'Angelo Barksdale", seasons: [1, 2] as Set),
         new TheWireCharacter(name: "Avon Barksdale", seasons: [1, 2, 3] as Set)
-));
+]
 
 def docks = CHARACTERS.findAll { it.seasons.contains(2) }
                       .sort { it.seasons.size() }
