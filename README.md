@@ -18,22 +18,26 @@ To play with the code, install:
 
 To run the demos manually:
 
-    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn clean install
+    export JAVA_HOME=~/Downloads/lambda-8-b69-linux-x64-17_dec_2012
+    export MAVEN=~/local/apache-maven-3.0.3/bin/mvn
+
+    # Build
+    $MAVEN clean install
 
     # Java 8
-    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.LambdaDemo
+    $MAVEN exec:java -Dexec.mainClass=lambda.LambdaDemo
 
     # Google Guava
-    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.GuavaDemo
+    $MAVEN exec:java -Dexec.mainClass=lambda.GuavaDemo
 
     # Kotlin
-    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.namespace
+    $MAVEN exec:java -Dexec.mainClass=lambda.kotlin.namespace
 
     # Groovy
-    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.GroovyDemo
+    $MAVEN exec:java -Dexec.mainClass=lambda.groovy.GroovyDemo
 
     # Enterprise Guava
-    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.EnterpriseGuavaDemo
+    $MAVEN exec:java -Dexec.mainClass=lambda.EnterpriseGuavaDemo
 
     # LambdaJ
-    JAVA_HOME=~/Downloads/lambda-8-b67-linux-x64-03_dec_2012 ~/local/apache-maven-3.0.3/bin/mvn exec:java -Dexec.mainClass=lambda.LambdaJDemo
+    $MAVEN exec:java -Dexec.mainClass=lambda.LambdaJDemo
