@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.io.PrintStream;
 
-import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.*;
 
 /**
@@ -34,7 +33,7 @@ public class JavaDocksTest {
 
     @Test
     public void testKotlin() {
-        lambda.namespace.main(null);
+        lambda.kotlin.namespace.main(null);
         verify(System.out).println(EXPECTED);
     }
 
