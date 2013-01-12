@@ -2,7 +2,7 @@ package lambda.kotlin
 
 data class TheWireCharacter(val name : String, vararg val seasons : Int)
 
-private val CHARACTERS : List<TheWireCharacter> = arrayListOf(
+private val CHARACTERS = array(
         TheWireCharacter("Jimmy McNulty", 1, 2, 3, 4, 5),
         TheWireCharacter("Lester Freamon", 2, 3, 4, 5),
         TheWireCharacter("Stringer Bell", 1, 2, 3),
