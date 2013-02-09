@@ -33,7 +33,7 @@ public class JavaDocksTest {
 
     @Test
     public void testKotlin() {
-        lambda.kotlin.namespace.main(null);
+        lambda.kotlin.KotlinPackage.main(null);
         verify(System.out).println(EXPECTED);
     }
 
