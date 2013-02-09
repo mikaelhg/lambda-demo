@@ -7,7 +7,7 @@ import groovy.transform.*
     final Set<Integer> seasons;
 }
 
-final CHARACTERS = [
+CHARACTERS = [
         new TheWireCharacter("Jimmy McNulty", [1, 2, 3, 4, 5] as Set),
         new TheWireCharacter("Lester Freamon", [2, 3, 4, 5] as Set),
         new TheWireCharacter("Stringer Bell", [1, 2, 3] as Set),
@@ -19,8 +19,8 @@ final CHARACTERS = [
         new TheWireCharacter("Avon Barksdale", [1, 2, 3] as Set)
 ].asImmutable()
 
-final docks = CHARACTERS.findAll { it.seasons.contains(2) }
-                        .sort { it.seasons.size() }
-                        .collect { it.name }
+docks = CHARACTERS.findAll { it.seasons.contains(2) }
+                  .sort { it.seasons.size() }
+                  .collect { it.name }
 
 println("Characters in the Baltimore docks-centered season: " + docks)
