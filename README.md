@@ -18,7 +18,7 @@ To play with the code, install:
 
 To run the demos manually:
 
-    export JAVA_HOME=~/Downloads/lambda-8-b69-linux-x64-17_dec_2012
+    export JAVA_HOME=~/Downloads/lambda-8-b75-linux-x64-28_jan_2013
     export MAVEN=~/local/apache-maven-3.0.3/bin/mvn
 
     # Build
@@ -31,7 +31,7 @@ To run the demos manually:
     $MAVEN exec:java -Dexec.mainClass=lambda.GuavaDemo
 
     # Kotlin
-    $MAVEN exec:java -Dexec.mainClass=lambda.kotlin.namespace
+    $MAVEN exec:java -Dexec.mainClass=lambda.KotlinPackage.namespace
 
     # Groovy
     $MAVEN exec:java -Dexec.mainClass=lambda.groovy.GroovyDemo
