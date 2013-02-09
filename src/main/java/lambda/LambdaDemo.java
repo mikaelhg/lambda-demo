@@ -1,6 +1,7 @@
 package lambda;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class LambdaDemo {
 
@@ -33,7 +34,7 @@ public class LambdaDemo {
                         .filter(c -> c.seasons.contains(2))
                         .sorted((a, b) -> a.seasons.size() - b.seasons.size())
                         .map(c -> c.name)
-                        .into(new ArrayList<String>());
+                        .collect(Collectors.toList());
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
     }
