@@ -46,6 +46,11 @@ public class DumbassDemo {
             if (c.seasons.contains(2)) {
                 docks.add(c);
             }
+            // The problem with this approach isn't the actual code we have here, it's benign.
+            // Instead, what I've seen happen again and again, is that these manual iterations
+            // turn into a very complicated "main loop" into which feature after feature is
+            // shoehorned, until it's very hard to tell what is being done, and which part of
+            // it connects to which feature.
         }
 
         Collections.sort(docks, BY_SEASONS);
