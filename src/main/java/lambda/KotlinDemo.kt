@@ -14,7 +14,7 @@ private val CHARACTERS = array(
         TheWireCharacter("Avon Barksdale", 1, 2, 3)
 )
 
-fun main(args : Array<String>) {
+fun main(args : Array<String>?) {
     val docks = CHARACTERS.filter { it.seasons.any { it == 2 } }
                           .sortBy { it.seasons.size }
                           .map { it.name }

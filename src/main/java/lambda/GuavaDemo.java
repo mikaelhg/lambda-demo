@@ -52,10 +52,9 @@ public class GuavaDemo {
 
     public static void main(final String ... args) {
         final ImmutableList<TheWireCharacter> docks =
-                FluentIterable
-                    .from(CHARACTERS)
+                FluentIterable.from(CHARACTERS)
                         .filter(inSeasons(2))
-                        .toSortedImmutableList(BY_SEASONS);
+                        .toSortedList(BY_SEASONS);
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
     }
