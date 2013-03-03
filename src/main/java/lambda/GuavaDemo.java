@@ -1,5 +1,6 @@
 package lambda;
 
+import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
@@ -18,9 +19,6 @@ public class GuavaDemo {
         public TheWireCharacter(final String name, final Integer ... seasons) {
             this.name = name;
             this.seasons = ImmutableSet.copyOf(seasons);
-        }
-        public String toString() {
-            return name;
         }
     }
 
@@ -51,10 +49,17 @@ public class GuavaDemo {
     };
 
     public static void main(final String ... args) {
-        final ImmutableList<TheWireCharacter> docks =
-                FluentIterable.from(CHARACTERS)
+        final ImmutableList<TheWireCharacter> characters = FluentIterable.from(CHARACTERS)
                         .filter(inSeasons(2))
                         .toSortedList(BY_SEASONS);
+
+        final ImmutableList<String> docks = FluentIterable.from(characters)
+                    .transform(new Function<TheWireCharacter, String>() {
+                        @Override public String apply(final TheWireCharacter input) {
+                            return input.name;
+                        }
+                    })
+                    .toList();
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
     }
