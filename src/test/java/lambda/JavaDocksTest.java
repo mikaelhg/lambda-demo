@@ -18,6 +18,8 @@ public class JavaDocksTest {
     private static final String EXPECTED =
             "Characters in the Baltimore docks-centered season: [Frank Sobotka, D'Angelo Barksdale, Stringer Bell, Avon Barksdale, Lester Freamon, Jimmy McNulty]";
 
+    private final static String[] EMPTY_ARRAY = new String[0];
+
     private PrintStream realOut;
 
     @Before
@@ -33,7 +35,7 @@ public class JavaDocksTest {
 
     @Test
     public void testKotlin() {
-        lambda.kotlin.KotlinPackage.main(null);
+        lambda.kotlin.KotlinPackage.main(EMPTY_ARRAY);
         verify(System.out).println(EXPECTED);
     }
 
