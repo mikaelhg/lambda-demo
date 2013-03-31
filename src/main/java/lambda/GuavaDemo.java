@@ -20,6 +20,11 @@ public class GuavaDemo {
             this.name = name;
             this.seasons = ImmutableSet.copyOf(seasons);
         }
+        public static final Function<TheWireCharacter, String> GET_NAME = new Function<TheWireCharacter, String>() {
+            @Override public String apply(final TheWireCharacter input) {
+                return input.name;
+            }
+        };
     }
 
     public static final ImmutableList<TheWireCharacter> CHARACTERS = ImmutableList.of(
@@ -54,11 +59,7 @@ public class GuavaDemo {
                         .toSortedList(BY_SEASONS);
 
         final ImmutableList<String> docks = FluentIterable.from(characters)
-                    .transform(new Function<TheWireCharacter, String>() {
-                        @Override public String apply(final TheWireCharacter input) {
-                            return input.name;
-                        }
-                    })
+                    .transform(TheWireCharacter.GET_NAME)
                     .toList();
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
