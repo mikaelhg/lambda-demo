@@ -67,6 +67,14 @@ public class EnterpriseGuavaDemo {
                 }
             };
         }
+
+        public static class Functions {
+            public static final Function<TheWireCharacter, String> GET_NAME = new Function<TheWireCharacter, String>() {
+                @Override public String apply(final TheWireCharacter input) {
+                    return input.name;
+                }
+            };
+        }
     }
 
     public static void main(final String ... args) {
@@ -75,11 +83,7 @@ public class EnterpriseGuavaDemo {
                             .toSortedList(TheWireCharacter.Comparators.BY_SEASONS);
 
         final ImmutableList<String> docks = FluentIterable.from(characters)
-                .transform(new Function<TheWireCharacter, String>() {
-                    @Override public String apply(final TheWireCharacter input) {
-                        return input.name;
-                    }
-                })
+                .transform(TheWireCharacter.Functions.GET_NAME)
                 .toList();
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
