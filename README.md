@@ -11,15 +11,15 @@ Also a bonus:
 
 To play with the code, install:
 
-* http://jdk8.java.net/lambda/
-* IntelliJ IDEA 12 Community
+* Java 8 lambda preview from http://jdk8.java.net/lambda/
+* IntelliJ IDEA 12.1 Community
 * Configure IDEA to use the Lambda preview JDK to compile and run the project code
   (File -> Project Structure -> Project SDK and Language Level)
 
 To run the demos manually:
 
-    export JAVA_HOME=~/Downloads/lambda-8-b75-linux-x64-28_jan_2013
-    export MAVEN=~/local/apache-maven-3.0.3/bin/mvn
+    export JAVA_HOME=~/Downloads/lambda-8-b83-linux-x64-25_mar_2013
+    export MAVEN=~/local/apache-maven-3.0.5/bin/mvn
 
     # Build
     $MAVEN clean install
