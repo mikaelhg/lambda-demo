@@ -31,7 +31,7 @@ To run the demos manually:
     $MAVEN exec:java -Dexec.mainClass=lambda.GuavaDemo
 
     # Kotlin
-    $MAVEN exec:java -Dexec.mainClass=lambda.KotlinPackage.namespace
+    $MAVEN exec:java -Dexec.mainClass=lambda.kotlin.KotlinPackage
 
     # Groovy
     $MAVEN exec:java -Dexec.mainClass=lambda.groovy.GroovyDemo
