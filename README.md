@@ -1,6 +1,7 @@
 Demonstrating a very common filter + sort functionality with:
 
 * Java 8 lambda functionality
+* Kotlin and Groovy
 * Google Guava FluentIterable and Predicates
 * LambdaJ proxies
 * by hand
