@@ -37,6 +37,9 @@ To run the demos manually:
     # Groovy
     $MAVEN exec:java -Dexec.mainClass=lambda.groovy.GroovyDemo
 
+    # Scala
+    $MAVEN exec:java -Dexec.mainClass=lambda.scala.ScalaDemo
+
     # Enterprise Guava
     $MAVEN exec:java -Dexec.mainClass=lambda.EnterpriseGuavaDemo
 
