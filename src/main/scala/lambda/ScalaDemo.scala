@@ -16,7 +16,7 @@ object ScalaDemo extends App {
     TheWireCharacter("Avon Barksdale", 1, 2, 3)
   )
 
-  val docks = CHARACTERS.filter { _.seasons.contains(2) }.sortBy { -1 * _.seasons.size }.map { _.name }
+  val docks = CHARACTERS filter({ _.seasons.contains(2) }) sortBy({ -1 * _.seasons.size }) map({ _.name })
 
   println("Characters in the Baltimore docks-centered season: " + docks.mkString("[", ", ", "]"))
 
