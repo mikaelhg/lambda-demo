@@ -11,7 +11,7 @@ Also a bonus:
 
 To play with the code, install:
 
-* Java 8 b93 from http://jdk8.java.net/ (now you can use the normal main tree JDK8 now, don't need to use the lambda preview anymore)
+* Java 8 b93 from http://jdk8.java.net/ (we don't need to use the lambda preview anymore)
 * IntelliJ IDEA 12.1 Community
 * Configure IDEA to use JDK8 to compile and run the project code
   (File -> Project Structure -> Project SDK and Language Level)
