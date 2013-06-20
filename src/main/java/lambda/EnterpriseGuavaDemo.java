@@ -79,8 +79,8 @@ public class EnterpriseGuavaDemo {
 
     public static void main(final String ... args) {
         final ImmutableList<TheWireCharacter> characters = FluentIterable.from(CHARACTERS)
-                            .filter(TheWireCharacter.Filters.inSeasons(2))
-                            .toSortedList(TheWireCharacter.Comparators.BY_SEASONS);
+                .filter(TheWireCharacter.Filters.inSeasons(2))
+                .toSortedList(TheWireCharacter.Comparators.BY_SEASONS);
 
         final ImmutableList<String> docks = FluentIterable.from(characters)
                 .transform(TheWireCharacter.Functions.GET_NAME)
