@@ -5,6 +5,7 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Ordering;
 
 import java.util.*;
 
@@ -47,20 +48,21 @@ public class GuavaDemo {
         };
     }
 
-    private static final Comparator<TheWireCharacter> BY_SEASONS = new Comparator<TheWireCharacter>() {
-        @Override public int compare(final TheWireCharacter a, final TheWireCharacter b) {
-            return a.seasons.size() - b.seasons.size();
-        }
-    };
+    private static final Ordering<TheWireCharacter> BY_SEASONS = Ordering.natural()
+            .onResultOf(new Function<TheWireCharacter, Integer>() {
+                @Override public Integer apply(final TheWireCharacter c) {
+                    return c.seasons.size();
+                }
+            });
 
     public static void main(final String ... args) {
         final ImmutableList<TheWireCharacter> characters = FluentIterable.from(CHARACTERS)
-                        .filter(inSeasons(2))
-                        .toSortedList(BY_SEASONS);
+                .filter(inSeasons(2))
+                .toSortedList(BY_SEASONS);
 
         final ImmutableList<String> docks = FluentIterable.from(characters)
-                    .transform(TheWireCharacter.GET_NAME)
-                    .toList();
+                .transform(TheWireCharacter.GET_NAME)
+                .toList();
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
     }
