@@ -45,3 +45,13 @@ To run the demos manually:
 
     # LambdaJ
     $MAVEN exec:java -Dexec.mainClass=lambda.LambdaJDemo
+
+Problems:
+
+IntelliJ IDEA 12.1.4 ships with the "external" Scala compiler on by default.
+Unfortunately this stops IDEA from compiling the Kotlin part of the project.
+
+To work around this, turn off
+File -> Settings -> Project Settings -> Compiler -> "Use external build" and,
+if necessary, also disable
+File -> Settings -> Project Settings -> Compiler -> Annotation processors -> lambda-demo -> "Enable annotation processing".
