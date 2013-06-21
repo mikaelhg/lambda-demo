@@ -1,6 +1,6 @@
 package lambda.scala
 
-case class TheWireCharacter(val name : String, val seasons : Int*)
+case class TheWireCharacter(name : String, seasons : Int*)
 
 object ScalaDemo extends App {
 
@@ -18,6 +18,6 @@ object ScalaDemo extends App {
 
   val docks = CHARACTERS filter {_.seasons.contains(2)} sortBy {-1 * _.seasons.size} map {_.name}
 
-  println("Characters in the Baltimore docks-centered season: " + docks.mkString("[", ", ", "]"))
+  println(s"""Characters in the Baltimore docks-centered season: ${docks.mkString("[", ", ", "]")}""")
 
 }
