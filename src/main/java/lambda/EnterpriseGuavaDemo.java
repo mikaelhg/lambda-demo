@@ -5,6 +5,7 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.FluentIterable;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Ordering;
 
 import java.util.*;
 
@@ -78,11 +79,11 @@ public class EnterpriseGuavaDemo {
     }
 
     public static void main(final String ... args) {
-        final ImmutableList<TheWireCharacter> characters = FluentIterable.from(CHARACTERS)
+        final ImmutableList<TheWireCharacter> secondSeasonCharacters = FluentIterable.from(CHARACTERS)
                 .filter(TheWireCharacter.Filters.inSeasons(2))
                 .toSortedList(TheWireCharacter.Comparators.BY_SEASONS);
 
-        final ImmutableList<String> docks = FluentIterable.from(characters)
+        final ImmutableList<String> docks = FluentIterable.from(secondSeasonCharacters)
                 .transform(TheWireCharacter.Functions.GET_NAME)
                 .toList();
 

@@ -56,11 +56,11 @@ public class GuavaDemo {
             });
 
     public static void main(final String ... args) {
-        final ImmutableList<TheWireCharacter> characters = FluentIterable.from(CHARACTERS)
+        final ImmutableList<TheWireCharacter> secondSeasonCharacters = FluentIterable.from(CHARACTERS)
                 .filter(inSeasons(2))
                 .toSortedList(BY_SEASONS);
 
-        final ImmutableList<String> docks = FluentIterable.from(characters)
+        final ImmutableList<String> docks = FluentIterable.from(secondSeasonCharacters)
                 .transform(TheWireCharacter.GET_NAME)
                 .toList();
 
