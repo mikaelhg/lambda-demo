@@ -14,6 +14,8 @@
         <scala.version>2.10.2</scala.version>
         <gmavenVersion>1.5</gmavenVersion>
         <gmavenProviderSelection>2.0</gmavenProviderSelection>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.test.skip>true</maven.test.skip>
     </properties>
 
     <repositories>
@@ -136,6 +138,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.7</version>
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
