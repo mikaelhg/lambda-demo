@@ -1,9 +1,8 @@
 Demonstrating a very common filter + sort functionality with:
 
-* Java 8 lambda functionality
-* Kotlin, Groovy and Scala
+* Java 8 stream/lambda functionality
 * Google Guava FluentIterable and Predicates
-* LambdaJ proxies
+* Kotlin, Groovy and Scala
 * by hand
 
 Also a bonus:
@@ -12,7 +11,7 @@ Also a bonus:
 
 To play with the code, install:
 
-* Java 8 b93 from http://jdk8.java.net/ (we don't need to use the lambda preview anymore)
+* Java 8 b93 or newer from http://jdk8.java.net/
 * IntelliJ IDEA 12.1 Community
 * Configure IDEA to use JDK8 to compile and run the project code
   (File -> Project Structure -> Project SDK and Language Level)
@@ -43,10 +42,7 @@ To run the demos manually:
     # Enterprise Guava
     $MAVEN exec:java -Dexec.mainClass=lambda.EnterpriseGuavaDemo
 
-    # LambdaJ
-    $MAVEN exec:java -Dexec.mainClass=lambda.LambdaJDemo
-
-Problems:
+Known issues:
 
 IntelliJ IDEA 12.1.4 ships with the "external" Scala compiler on by default.
 Unfortunately this stops IDEA from compiling the Kotlin part of the project.
