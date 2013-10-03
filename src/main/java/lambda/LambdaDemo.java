@@ -34,7 +34,7 @@ public class LambdaDemo {
                         .filter(c -> c.seasons.contains(2))
                         .sorted((a, b) -> a.seasons.size() - b.seasons.size())
                         .map(c -> c.name)
-                        .collect(Collectors.toList());
+                        .collect(Collectors.<String>toList());
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
     }
