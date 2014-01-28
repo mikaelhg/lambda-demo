@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <kotlin.version>0.6.602</kotlin.version>
+        <kotlin.version>0.6.1673</kotlin.version>
         <groovy.version>2.1.7</groovy.version>
         <scala.version>2.10.2</scala.version>
         <gmavenVersion>1.5</gmavenVersion>

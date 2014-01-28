@@ -5,9 +5,6 @@ import java.util.stream.Collectors;
 
 public class LambdaDemo {
 
-    /**
-     * http://en.wikipedia.org/wiki/List_of_The_Wire_characters
-     */
     public static class TheWireCharacter {
         public final String name;
         public final Set<Integer> seasons;
@@ -34,7 +31,7 @@ public class LambdaDemo {
                         .filter(c -> c.seasons.contains(2))
                         .sorted((a, b) -> a.seasons.size() - b.seasons.size())
                         .map(c -> c.name)
-                        .collect(Collectors.<String>toList());
+                        .collect(Collectors.toList());
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
     }
