@@ -7,7 +7,7 @@ import groovy.transform.*
     final Set<Integer> seasons;
 }
 
-CHARACTERS = [
+def CHARACTERS = [
         new TheWireCharacter("Jimmy McNulty", [1, 2, 3, 4, 5] as Set),
         new TheWireCharacter("Lester Freamon", [2, 3, 4, 5] as Set),
         new TheWireCharacter("Stringer Bell", [1, 2, 3] as Set),
