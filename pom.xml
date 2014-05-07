@@ -9,9 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <kotlin.version>0.6.1673</kotlin.version>
-        <groovy.version>2.1.7</groovy.version>
-        <scala.version>2.10.2</scala.version>
+        <kotlin.version>0.7.271</kotlin.version>
+        <groovy.version>2.3.0</groovy.version>
+        <scala.version>2.11.0</scala.version>
         <gmavenVersion>1.5</gmavenVersion>
         <gmavenProviderSelection>2.0</gmavenProviderSelection>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>15.0</version>
+            <version>17.0</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -99,7 +99,7 @@
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>3.1.5</version>
+                <version>3.1.6</version>
                 <executions>
                     <execution>
                         <goals>

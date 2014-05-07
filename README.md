@@ -11,7 +11,7 @@ Also a bonus:
 
 To play with the code, install:
 
-* Java 8 b121 or newer from http://jdk8.java.net/
+* Java 8 JDK or newer from http://java.oracle.com/
 * IntelliJ IDEA 13 Community
 * Configure IDEA to use JDK8 to compile and run the project code
   (File -> Project Structure -> Project SDK and Language Level)
