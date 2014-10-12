@@ -15,9 +15,9 @@ private val CHARACTERS = array(
 )
 
 fun main(args : Array<String>) {
-    val docks = CHARACTERS.filter { it.seasons.any { it == 2 } }
+    val docks = CHARACTERS.filter { 2 in it.seasons.any }
                           .sortBy { it.seasons.size }
                           .map { it.name }
 
-    println("Characters in the Baltimore docks-centered season: " + docks)
+    println("Characters in the Baltimore docks-centered season: $docks")
 }
