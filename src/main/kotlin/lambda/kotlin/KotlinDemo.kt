@@ -15,7 +15,7 @@ private val CHARACTERS = array(
 )
 
 fun main(args : Array<String>) {
-    val docks = CHARACTERS.filter { 2 in it.seasons.any }
+    val docks = CHARACTERS.filter { 2 in it.seasons }
                           .sortBy { it.seasons.size }
                           .map { it.name }
 
