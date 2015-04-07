@@ -12,7 +12,7 @@ Also a bonus:
 To play with the code, install:
 
 * Java 8 JDK or newer from http://java.oracle.com/
-* IntelliJ IDEA 13 Community
+* IntelliJ IDEA 14.1+ Community
 * Configure IDEA to use JDK8 to compile and run the project code
   (File -> Project Structure -> Project SDK and Language Level)
 
