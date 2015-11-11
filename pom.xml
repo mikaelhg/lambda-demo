@@ -9,9 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <kotlin.version>0.11.91.1</kotlin.version>
-        <groovy.version>2.4.3</groovy.version>
-        <scala.version>2.11.6</scala.version>
+        <kotlin.version>1.0.0-beta-1103</kotlin.version>
+        <groovy.version>2.4.5</groovy.version>
+        <scala.version>2.11.7</scala.version>
         <gmavenVersion>1.5</gmavenVersion>
         <gmavenProviderSelection>2.0</gmavenProviderSelection>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -99,7 +99,7 @@
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.2.2</version>
                 <executions>
                     <execution>
                         <goals>

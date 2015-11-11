@@ -12,14 +12,14 @@ Also a bonus:
 To play with the code, install:
 
 * Java 8 JDK or newer from http://java.oracle.com/
-* IntelliJ IDEA 14.1+ Community
+* IntelliJ IDEA 15+ Community
 * Configure IDEA to use JDK8 to compile and run the project code
   (File -> Project Structure -> Project SDK and Language Level)
 
 To run the demos manually:
 
     export JAVA_HOME=~/Downloads/jdk1.8.0
-    export MAVEN=~/local/apache-maven-3.0.5/bin/mvn
+    export MAVEN=~/local/apache-maven-3.3.3/bin/mvn
 
     # Build
     $MAVEN clean install

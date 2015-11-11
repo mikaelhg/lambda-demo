@@ -33,7 +33,7 @@ public class LambdaDemo {
                         .map(c -> c.name)
                         .collect(Collectors.toList());
 
-        System.out.println("Characters in the Baltimore docks-centered season: " + docks);
+        System.out.printf("Characters in the Baltimore docks-centered season: %s%n", docks);
     }
 
 }
