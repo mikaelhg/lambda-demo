@@ -14,7 +14,7 @@ public class LambdaDemo {
         }
     }
 
-    private static final List<TheWireCharacter> CHARACTERS = Collections.unmodifiableList(Arrays.asList(
+    private static final List<TheWireCharacter> CHARACTERS = List.of(
             new TheWireCharacter("Jimmy McNulty", 1, 2, 3, 4, 5),
             new TheWireCharacter("Lester Freamon", 2, 3, 4, 5),
             new TheWireCharacter("Stringer Bell", 1, 2, 3),
@@ -24,12 +24,12 @@ public class LambdaDemo {
             new TheWireCharacter("Frank Sobotka", 2),
             new TheWireCharacter("D'Angelo Barksdale", 1, 2),
             new TheWireCharacter("Avon Barksdale", 1, 2, 3)
-    ));
+    );
 
     public static void main(final String ... args) {
         final List<String> docks = CHARACTERS.stream()
                         .filter(c -> c.seasons.contains(2))
-                        .sorted((a, b) -> a.seasons.size() - b.seasons.size())
+                        .sorted(Comparator.comparingInt(c -> c.seasons.size()))
                         .map(c -> c.name)
                         .collect(Collectors.toList());
 

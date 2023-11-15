@@ -15,7 +15,7 @@ public class DumbassDemo {
         public final Set<Integer> seasons;
         public TheWireCharacter(final String name, final Integer ... seasons) {
             this.name = name;
-            this.seasons = Collections.unmodifiableSet(new TreeSet<>(Arrays.asList(seasons)));
+            this.seasons = Set.of(seasons);
         }
         public String toString() {
             return name;
@@ -29,7 +29,7 @@ public class DumbassDemo {
     };
 
     public static void main(final String ... args) {
-        final List<TheWireCharacter> characters = Arrays.asList(
+        final List<TheWireCharacter> characters = List.of(
                 new TheWireCharacter("Jimmy McNulty", 1, 2, 3, 4, 5),
                 new TheWireCharacter("Lester Freamon", 2, 3, 4, 5),
                 new TheWireCharacter("Stringer Bell", 1, 2, 3),
@@ -53,7 +53,7 @@ public class DumbassDemo {
             // it connects to which feature.
         }
 
-        Collections.sort(docks, BY_SEASONS);
+        docks.sort(BY_SEASONS);
 
         System.out.println("Characters in the Baltimore docks-centered season: " + docks);
     }

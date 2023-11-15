@@ -3,8 +3,8 @@ package lambda.groovy
 import groovy.transform.*
 
 @Immutable @TupleConstructor class TheWireCharacter {
-    final String name;
-    final List<Integer> seasons;
+    final String name
+    final List<Integer> seasons
 }
 
 def CHARACTERS = [
@@ -16,7 +16,7 @@ def CHARACTERS = [
         new TheWireCharacter("Chris Partlow", [5]),
         new TheWireCharacter("Frank Sobotka", [2]),
         new TheWireCharacter("D'Angelo Barksdale", [1, 2]),
-        new TheWireCharacter("Avon Barksdale", [1, 2, 3])
+        new TheWireCharacter("Avon Barksdale", [1, 2, 3]),
 ].asImmutable()
 
 docks = CHARACTERS.findAll { it.seasons.contains(2) }
