@@ -11,43 +11,31 @@ Also a bonus:
 
 To play with the code, install:
 
-* Java 8 JDK or newer from http://java.oracle.com/
-* IntelliJ IDEA 15+ Community
-* Configure IDEA to use JDK8 to compile and run the project code
-  (File -> Project Structure -> Project SDK and Language Level)
+* mise-en-place
+* Java 21
+* IntelliJ IDEA Community
 
 To run the demos manually:
 
-    export JAVA_HOME=~/Downloads/jdk1.8.0
-    export MAVEN=~/local/apache-maven-3.3.3/bin/mvn
-
+    mise use java@zulu-21
+ 
     # Build
-    $MAVEN clean install
+    mvn clean install
 
     # Java 8
-    $MAVEN exec:java -Dexec.mainClass=lambda.LambdaDemo
+    mvn exec:java -Dexec.mainClass=lambda.LambdaDemo
 
     # Google Guava
-    $MAVEN exec:java -Dexec.mainClass=lambda.GuavaDemo
+    mvn exec:java -Dexec.mainClass=lambda.GuavaDemo
 
     # Kotlin
-    $MAVEN exec:java -Dexec.mainClass=lambda.kotlin.KotlinPackage
+    mvn exec:java -Dexec.mainClass=lambda.kotlin.KotlinDemoKt
 
     # Groovy
-    $MAVEN exec:java -Dexec.mainClass=lambda.groovy.GroovyDemo
+    mvn exec:java -Dexec.mainClass=lambda.groovy.GroovyDemo
 
     # Scala
-    $MAVEN exec:java -Dexec.mainClass=lambda.scala.ScalaDemo
+    mvn exec:java -Dexec.mainClass=lambda.scala.ScalaDemo
 
     # Enterprise Guava
-    $MAVEN exec:java -Dexec.mainClass=lambda.EnterpriseGuavaDemo
-
-Known issues:
-
-IntelliJ IDEA 12.1.4 ships with the "external" Scala compiler on by default.
-Unfortunately this stops IDEA from compiling the Kotlin part of the project.
-
-To work around this, turn off
-File -> Settings -> Project Settings -> Compiler -> "Use external build" and,
-if necessary, also disable
-File -> Settings -> Project Settings -> Compiler -> Annotation processors -> lambda-demo -> "Enable annotation processing".
+    mvn exec:java -Dexec.mainClass=lambda.EnterpriseGuavaDemo
