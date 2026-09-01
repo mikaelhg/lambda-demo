@@ -10,8 +10,8 @@
 
     <properties>
         <kotlin.version>2.4.10</kotlin.version>
-        <groovy.version>5.0.8</groovy.version>
-        <scala.version>3.8.4</scala.version>
+        <groovy.version>5.1.1</groovy.version>
+        <scala.version>3.9.0</scala.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.test.skip>true</maven.test.skip>
         <maven.compiler.source>21</maven.compiler.source>
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>33.6.0-jre</version>
+            <version>33.7.1-jre</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
